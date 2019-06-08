@@ -11,6 +11,27 @@ module.exports = function(app) {
     });
   });
 
+  // Load user page after login
+  app.get("/user", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("user");
+    });
+  });
+
+  // Load user created plans page
+  app.get("/user/create-plan", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("create-plan");
+    });
+  });
+
+  // Load user created plans page
+  app.get("/user/saved-plans", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("saved-plans");
+    });
+  });
+
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
