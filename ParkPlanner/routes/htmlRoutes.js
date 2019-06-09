@@ -5,6 +5,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("index", {
+        style: "styles.css",
         msg: "Welcome!",
         examples: dbExamples
       });
@@ -21,7 +22,9 @@ module.exports = function(app) {
   // Load user created plans page
   app.get("/user/create-plan", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
-      res.render("create-plan");
+      res.render("create-plan", {
+        style: "create-plan.css"
+      });
     });
   });
 
