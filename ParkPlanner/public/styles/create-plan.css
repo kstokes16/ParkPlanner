@@ -44,3 +44,16 @@ body {
     background-color: #31709b;
     color: purple;
 }
+
+#dropdownRideButton, .rideDropdown, .dropdown-item {
+    color: white;
+    background-color: #31709b;
+}
+
+.add-schedule-btn {
+    border: 3px #31709b;
+}
+
+.add-schedule-btn:hover {
+    background-color: #31709b;
+}
