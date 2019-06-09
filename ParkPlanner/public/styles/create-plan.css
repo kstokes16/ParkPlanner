@@ -39,3 +39,8 @@ body {
 .menu-link {
     color: white;
 }
+
+.footer {
+    background-color: #31709b;
+    color: purple;
+}
