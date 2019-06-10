@@ -5,6 +5,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("index", {
+        style: "styles.css",
         msg: "Welcome!",
         examples: dbExamples
       });
@@ -13,28 +14,30 @@ module.exports = function(app) {
 
   // Load user page after login
   app.get("/user", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Example.findAll({}).then(function() {
       res.render("user");
     });
   });
 
   // Load user created plans page
   app.get("/user/create-plan", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("create-plan");
+    db.Example.findAll({}).then(function() {
+      res.render("create-plan", {
+        style: "create-plan.css"
+      });
     });
   });
 
   // Load user created plans page
   app.get("/user/saved-plans", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Example.findAll({}).then(function() {
       res.render("saved-plans");
     });
   });
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function() {
       res.render("example", {
         example: dbExample
       });

@@ -1,31 +1,106 @@
-<div id="home">
-  <div class="container">
+
+      
+
+  <div class="container">  
+    <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Navbar</a>
+        </nav>
     <div class="row">
-      <div class="col-8 offset-2">
-        <h1>This is our Saved Plans Page!</h1>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
+
+<!-- left sidebar -->
+    <div class="col-med-4" id="sidebar">
+        <a href="#">FAVORITES</a>
+        <br>
+        <a href="#">SUGGESTED ROUTES</a>
     </div>
-  </div>
+    <!-- right col of 8 -->
+    <div class="col-lg-8">
+    <div class="col-lg-12" id="saved-plan-title">
+        <h2>YOUR SAVED PLANS</h2>
+        <h3>MAGIC KINGDOM</h3>
+    </div>
+    
+    <!-- First card with img and title-->
+    <div class="row" id="ride-card-one">
+        <div class="col-lg-4">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                    <img src="../public/styles/mickey.png" class="card-img img-fluid" alt="mickey">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Ride title</h5>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- *goes with first ride*Card with time, wait time, and short description of ride -->
+        <div class="col-lg-4" id="description-card-one">
+            <p class="time">Time:</p>
+            <p class="est-wait">Your estimated wait:</p>
+            <p class="ride-description">Description</p>
+        </div>
+    </div>
+
+    <!-- second card with img and title -->
+    <div class="row" id="ride-card-two">
+        <div class="col-lg-4">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                    <img src="../public/styles/mickey.png" class="card-img" alt="mickey">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Ride title</h5>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- *goes with second ride* Card with time, wait time, and short description of ride -->
+        <div class="col-lg-4" id="description-card-two">
+            <p class="time">Time:</p>
+            <p class="est-wait">Your estimated wait:</p>
+            <p class="ride-description">Description</p>
+        </div>
+    </div>
+
+<!-- row with edit checkbox and social shares -->
+<div class="row" id="social-checkbox">
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="edit-plan-checkbox" value="option1">
+      <label class="form-check-label" for="inlineCheckbox1">edit</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="share-twitter" value="option1">
+      <label class="form-check-label" for="inlineCheckbox1">Twitter</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="share-facebook" value="option2">
+      <label class="form-check-label" for="inlineCheckbox2">Facebook</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="share-instagram" value="option1">
+      <label class="form-check-label" for="inlineCheckbox1">Instagram</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="share-snapchat" value="option2">
+      <label class="form-check-label" for="inlineCheckbox2">Snapchat</label>
+    </div>
+</div>
+
+</div>
+
+</div>      
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
