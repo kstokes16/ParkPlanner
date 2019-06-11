@@ -1,107 +1,187 @@
+<div class="header">
+    <!--Navbar-->
+    <nav class="navbar navbar-light light-blue lighten-4">
 
-      
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/">Park Planner</a>
 
-  <div class="container">  
-    <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#">Navbar</a>
-        </nav>
+        <!-- Collapse button -->
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="dark-blue-text"><i
+                    class="fas fa-bars fa-1x"></i></span></button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">User Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/example">Example Routes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://disneyworld.disney.go.com/" target="_blank">Disney
+                        Information</a>
+                </li>
+            </ul>
+            <!-- Links -->
+
+        </div>
+        <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+</div><br>
+
+<div class="container">
     <div class="row">
-
-<!-- left sidebar -->
-    <div class="col-med-4" id="sidebar">
-        <a href="#">FAVORITES</a>
-        <br>
-        <a href="#">SUGGESTED ROUTES</a>
-    </div>
-    <!-- right col of 8 -->
-    <div class="col-lg-8">
-    <div class="col-lg-12" id="saved-plan-title">
-        <h2>YOUR SAVED PLANS</h2>
-        <h3>MAGIC KINGDOM</h3>
-    </div>
-    
-    <!-- First card with img and title-->
-    <div class="row" id="ride-card-one">
-        <div class="col-lg-4">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                    <img src="../public/styles/mickey.png" class="card-img img-fluid" alt="mickey">
-                    </div>
-                    <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Ride title</h5>
-                    </div>
-                    </div>
+        <div class="col-sm-12">
+            <h1>Saved Plans</h1>
+            <hr>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <a href="#">
+                        <h5>Favorite Rides</h5>
+                    </a>
+                    <hr>
+                    <a href="/user">
+                        <h5>Create a New Plan</h5>
+                    </a>
+                    <hr>
                 </div>
             </div>
         </div>
-        <!-- *goes with first ride*Card with time, wait time, and short description of ride -->
-        <div class="col-lg-4" id="description-card-one">
-            <p class="time">Time:</p>
-            <p class="est-wait">Your estimated wait:</p>
-            <p class="ride-description">Description</p>
-        </div>
-    </div>
-
-    <!-- second card with img and title -->
-    <div class="row" id="ride-card-two">
-        <div class="col-lg-4">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                    <img src="../public/styles/mickey.png" class="card-img" alt="mickey">
+        <div class="col-lg-9">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <a href="#"><img src="https://via.placeholder.com/150"></a>
+                        </div>
+                        <div class="col-sm-9">
+                            <h4>Created Plan Title</h4>
+                            <p>This is where you can see the past plans you've saved! It will give the details of
+                                the
+                                park
+                                you picked, and a few rides that you chose as well.
+                            </p>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <a href="/user/create-plan"><button type="button"
+                                            class="btn btn-secondary">Edit?</button></a>
+                                </div>
+                                <div class="col-sm-10">
+                                    <p>Share your plan! <i class="fab fa-facebook-square"></i> <i
+                                            class="fab fa-twitter-square"></i> <i class="fab fa-instagram"></i> <i
+                                            class="fas fa-envelope-open-text"></i></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Ride title</h5>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <a href="#"><img src="https://via.placeholder.com/150"></a>
+                        </div>
+                        <div class="col-sm-9">
+                            <h4>Created Plan Title</h4>
+                            <p>This is where you can see the past plans you've saved! It will give the details of
+                                the
+                                park
+                                you picked, and a few rides that you chose as well.
+                            </p>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <a href="/user/create-plan"><button type="button"
+                                            class="btn btn-secondary">Edit?</button></a>
+                                </div>
+                                <div class="col-sm-10">
+                                    <p>Share your plan! <i class="fab fa-facebook-square"></i> <i
+                                            class="fab fa-twitter-square"></i> <i class="fab fa-instagram"></i> <i
+                                            class="fas fa-envelope-open-text"></i></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <a href="#"><img src="https://via.placeholder.com/150"></a>
+                        </div>
+                        <div class="col-sm-9">
+                            <h4>Created Plan Title</h4>
+                            <p>This is where you can see the past plans you've saved! It will give the details of
+                                the
+                                park
+                                you picked, and a few rides that you chose as well.
+                            </p>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <a href="/user/create-plan"><button type="button"
+                                            class="btn btn-secondary">Edit?</button></a>
+                                </div>
+                                <div class="col-sm-10">
+                                    <p>Share your plan! <i class="fab fa-facebook-square"></i> <i
+                                            class="fab fa-twitter-square"></i> <i class="fab fa-instagram"></i> <i
+                                            class="fas fa-envelope-open-text"></i></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <hr>
                 </div>
             </div>
         </div>
+    </div>
+</div><br>
 
-        <!-- *goes with second ride* Card with time, wait time, and short description of ride -->
-        <div class="col-lg-4" id="description-card-two">
-            <p class="time">Time:</p>
-            <p class="est-wait">Your estimated wait:</p>
-            <p class="ride-description">Description</p>
+<footer class="card-footer mt-auto py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <!-- <div class="card"> -->
+                <div class="card-body">
+                    <h4>Contact us!</h4>
+                    <p><a href="#" class="links"><i class="fab fa-facebook-square"></i> Facebook</a></p>
+                    <p><a href="#" class="links"><i class="fab fa-twitter-square"></i> Twitter</a></p>
+                    <p><a href="#" class="links"><i class="fab fa-instagram"></i> Instagram</a></p>
+                    <p><a href="#" class="links"><i class="fas fa-envelope-open-text"></i> Email</a></p>
+                </div>
+                <!-- </div> -->
+            </div>
+            <div class="col-lg-6">
+                <!-- <div class="card"> -->
+                <div class="card-body">
+                    <h4>Disney Information</h4>
+                    <p><a href="https://disneyworld.disney.go.com/admission/" target="_blank" class="links"><i
+                                class="fas fa-ticket-alt"></i> Parks and
+                            Tickets</a>
+                    </p>
+                    <p><a href="https://disneyworld.disney.go.com/resorts/" target="_blank" class="links"><i
+                                class="fas fa-hotel"></i> Places to
+                            Stay</a></p>
+                    <p><a href="https://disneyworld.disney.go.com/activities/" target="_blank" class="links"><i
+                                class="fas fa-calendar-alt"></i> Things to
+                            Do</a></p>
+                    <p><a href="https://www.shopdisney.com/property/disney-parks/walt-disney-world?CMP=syn-dcom:dcomm_parks_WDW_SDPRedirect_SiteNav_GearUpForYourVacation_efc280559"
+                            target="_blank" class="links"><i class="fas fa-shopping-cart"></i> Shop</a>
+                    </p>
+                </div>
+                <!-- </div> -->
+            </div>
         </div>
     </div>
-
-<!-- row with edit checkbox and social shares -->
-<div class="row" id="social-checkbox">
-
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="edit-plan-checkbox" value="option1">
-      <label class="form-check-label" for="inlineCheckbox1">edit</label>
-    </div>
-
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="share-twitter" value="option1">
-      <label class="form-check-label" for="inlineCheckbox1">Twitter</label>
-    </div>
-
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="share-facebook" value="option2">
-      <label class="form-check-label" for="inlineCheckbox2">Facebook</label>
-    </div>
-
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="share-instagram" value="option1">
-      <label class="form-check-label" for="inlineCheckbox1">Instagram</label>
-    </div>
-
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="share-snapchat" value="option2">
-      <label class="form-check-label" for="inlineCheckbox2">Snapchat</label>
-    </div>
-</div>
-
-</div>
-
-</div>      
-</div>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

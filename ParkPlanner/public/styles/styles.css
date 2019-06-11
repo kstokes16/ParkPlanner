@@ -1,83 +1,26 @@
-.list-group-item {
-  line-height: 2.5;
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
-
-body {
-  height: auto;
-  width: auto;
-}
-
-.navbar-expand-lg {
-  background-color: #306d98;
-  color: white;
-}
-
-.navbar-brand {
-  color: white;
-}
-
-#saved-plan-title {
-  background-color: #95c3cc;
-  color: white;
-  /*margin: 5px; */
+.card-footer, .links {
+  background-color: lightblue;
+  color: black;
   font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-  
 }
 
-.card-title {
+.card-title, h5 {
+  color: black;
   font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-#ride-card-one {
-  background-color: #f6c312;
-  /*margin: 5px; */
-  padding: 3px;
+.header {
+  background-color: lightblue;
+  font-family: 'Courier New', Courier, monospace;
 }
-
-#ride-card-two {
-  background-color: #f6c312;
-  /*margin: 5px; */
-  padding: 3px;
-}
-
-
-#description-card-one {
-  background-color: #f7d8b3;
-  /* margin: 5px; */
-  padding: 3px;
-}
-
-#description-card-two {
-  background-color: #f7d8b3;
-  /* margin: 5px; */
-  padding: 3px;
-}
-
-#sidebar {
-  background-color: #f8edb3;
-  padding: 5px;
-  margin: 0px 0px 35px 15px;
-}
-
-#social-checkbox {
-  margin: 5px;
-  width: auto;
-}
-
-
-
-/* colors
-#306d98; dark blue
-#95c3cc; light blue
-#f7d8b3; beige
-#f6c312; yellow
-#f8edb3; lt yellow
-*/
-
-
-
-
-
