@@ -1,46 +1,26 @@
-body { 
-    background: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-010-winter-neva.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    font-family: 'Fresca', sans-serif;
-  }  
-  
-
-/* body {
-    background-color: #9bc7d2;
-} */
-
-.page-footer {
-    background-color: #fff3b6;
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.navbar, .expand-nav {
-    background-color: #fcc814;
+.card-footer, .links {
+    background-color: lightblue;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-#main-title {
-    color: #31709b;
+.card-title, h5 {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.btn-primary {
-    background-color: #fcc814;
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.card-title {
-    color: #31709b;
-}
-
-.column-header {
-    color: white;
-}
-
-.menu-link {
-    color: white;
-}
-
-.footer {
-    background-color: #31709b;
-    color: purple;
+.header {
+    background-color: lightblue;
+    font-family: 'Courier New', Courier, monospace;
 }
