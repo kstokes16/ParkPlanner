@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "lovedaddy",
-    "database": "testdb",
+    "password": "VsonJ8!",
+    "database": "exampledb",
     "host": "localhost",
     "dialect": "mysql"
   },
