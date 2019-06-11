@@ -3,11 +3,9 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Example.findAll({}).then(function() {
       res.render("index", {
-        style: "styles.css",
-        msg: "Welcome!",
-        examples: dbExamples
+        style: "index-style.css"
       });
     });
   });
@@ -15,7 +13,9 @@ module.exports = function(app) {
   // Load user page after login
   app.get("/user", function(req, res) {
     db.Example.findAll({}).then(function() {
-      res.render("user");
+      res.render("user", {
+      style: "user-style.css"
+      });
     });
   });
 
@@ -31,15 +31,17 @@ module.exports = function(app) {
   // Load user created plans page
   app.get("/user/saved-plans", function(req, res) {
     db.Example.findAll({}).then(function() {
-      res.render("saved-plans");
+      res.render("saved-plans", {
+        style: "styles.css"
+      });
     });
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function() {
+  app.get("/example", function(req, res) {
+    db.Example.findAll({}).then(function() {
       res.render("example", {
-        example: dbExample
+        style: "example-style.css"
       });
     });
   });
