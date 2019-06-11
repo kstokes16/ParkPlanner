@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "VsonJ8!",
-    "database": "burgers_db",
+    "password": "lovedaddy",
+    "database": "testdb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "lovedaddy",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",

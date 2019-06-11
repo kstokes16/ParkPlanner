@@ -1,32 +1,160 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>This is our User Page!</h1>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+<div class="header">
+  <!--Navbar-->
+  <nav class="navbar navbar-light light-blue lighten-4">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="/">Park Planner</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+      aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">User Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/example">Example Routes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://disneyworld.disney.go.com/" target="_blank">Disney
+            Information</a>
+        </li>
+      </ul>
+      <!-- Links -->
+
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
+</div><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1> Pick a Park to Create a Plan!</h1>
+      <hr>
+    </div>
+  </div><br>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-body">
+          <a href="#">
+            <h5>Favorite Rides</h5>
+          </a>
+          <hr>
+          <a href="/user/saved-plans">
+            <h5>Saved Plans</h5>
+          </a>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-7">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card" style="width: 18rem;">
+            <a href="#"><img
+                src="https://images.unsplash.com/photo-1555306210-a7dacfb0f72c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                class="card-img-top" alt="Magic Kingdom">
+              <div class="card-body">
+                <h5 class="card-title">Magic Kingdom</h5>
+            </a>
+            <!-- <a href="#" class="btn btn-info">Add to Plan</a> -->
           </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card" style="width: 18rem;">
+          <a href="#"><img
+              src="https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2013/10/DAK-Entrance.jpg"
+              class="card-img-top" alt="Animal Kingdom">
+            <div class="card-body">
+              <h5 class="card-title">Animal Kingdom</h5>
+          </a>
+          <!-- <a href="#" class="btn btn-primary">Add to Plan</a> -->
+        </div>
+      </div>
+    </div>
+  </div><br>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card" style="width: 18rem;">
+        <a href="#"><img
+            src="https://images.unsplash.com/photo-1485824119360-27e61739eac7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            class="card-img-top" alt="Epcot">
+          <div class="card-body">
+            <h5 class="card-title">Epcot</h5>
+        </a>
+        <!-- <a href="#" class="btn btn-primary">Add to Plan</a> -->
       </div>
     </div>
   </div>
+  <div class="col-sm-6">
+    <div class="card" style="width: 18rem;">
+      <a href="#"><img
+          src="https://orlando-attractions-ssl-dpfmxqguadzjp.netdna-ssl.com/wp-content/uploads/2012/04/Hollywood-Studios-tower.jpg"
+          class="card-img-top" alt="Hollywood Studios">
+        <div class="card-body">
+          <h5 class="card-title">Hollywood Studios</h5>
+      </a>
+      <!-- <a href="#" class="btn btn-primary">Add to Plan</a> -->
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div><br>
 </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<footer class="card-footer mt-auto py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- <div class="card"> -->
+        <div class="card-body">
+          <h4>Contact us!</h4>
+          <p><a href="#" class="links"><i class="fab fa-facebook-square"></i> Facebook</a></p>
+          <p><a href="#" class="links"><i class="fab fa-twitter-square"></i> Twitter</a></p>
+          <p><a href="#" class="links"><i class="fab fa-instagram"></i> Instagram</a></p>
+          <p><a href="#" class="links"><i class="fas fa-envelope-open-text"></i> Email</a></p>
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="col-lg-6">
+        <!-- <div class="card"> -->
+        <div class="card-body">
+          <h4>Disney Information</h4>
+          <p><a href="https://disneyworld.disney.go.com/admission/" target="_blank" class="links"><i
+                class="fas fa-ticket-alt"></i> Parks and
+              Tickets</a>
+          </p>
+          <p><a href="https://disneyworld.disney.go.com/resorts/" target="_blank" class="links"><i
+                class="fas fa-hotel"></i> Places to
+              Stay</a></p>
+          <p><a href="https://disneyworld.disney.go.com/activities/" target="_blank" class="links"><i
+                class="fas fa-calendar-alt"></i> Things to
+              Do</a></p>
+          <p><a
+              href="https://www.shopdisney.com/property/disney-parks/walt-disney-world?CMP=syn-dcom:dcomm_parks_WDW_SDPRedirect_SiteNav_GearUpForYourVacation_efc280559"
+              target="_blank" class="links"><i class="fas fa-shopping-cart"></i> Shop</a>
+          </p>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
