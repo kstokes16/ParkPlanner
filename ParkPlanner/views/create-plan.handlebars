@@ -1,142 +1,184 @@
-<!-- Navbar -->
-<div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="expand-nav p-4 menu-links ml-auto">
-      <a href="/"><h5 class="menu-link">Home</h5></a>
-      <a href="/user/create-plan"><h5 class="menu-link">Create Plan</h5></a>
-      <a href="/user/saved-plans"><h5 class="menu-link">Saved Plans</h5></a>
-      <a href="#"><h5 class="menu-link">User</h5></a>
+<div class="header">
+  <!--Navbar-->
+  <nav class="navbar navbar-light light-blue lighten-4">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="./index.html">Park Planner</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+      aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">User Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./examples.html">Example Routes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://disneyworld.disney.go.com/" target="_blank">Disney
+            Information</a>
+        </li>
+      </ul>
+      <!-- Links -->
+
     </div>
-  </div>
-  <nav class="navbar navbar-dark ml-auto">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <!-- Collapsible content -->
+
   </nav>
-</div>
-<!-- End of Navbar -->
+  <!--/.Navbar-->
+</div><br>
 
-<!-- Beginning of main page container -->
-<div class="container">
-  <br>
-  
-  <!-- Heading !-->
-  <div class="row">
-    <div class="col-12 text-center">
-      <h2 id="main-title"><strong>Create your Disney plan!</strong></h2>
-      <hr id="line-divider">
-      <br>
+<div class="row">
+  <div class="col-sm-12">
+    <h1>Create Your Plan</h1>
+    <hr>
+  </div>
+</div><br>
+<div class="row">
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <a href="#">
+          <h5>Favorite Rides</h5>
+        </a>
+        <hr>
+        <a href="/user/saved-plans">
+          <h5>Saved Plans</h5>
+        </a>
+        <hr>
+      </div>
     </div>
   </div>
-
-  <!-- Your created plans -->
-  <div class="row">
-    <!-- Column with your favorites and created plans -->
-    <div class="col-lg-4 text-center">
-      <h4 class="column-header">Favorites</h4>
-      <h4 class="column-header">Your Created Plans</h4>
+  <div class="col-lg-9">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="https://via.placeholder.com/100">
+              </div>
+              <div class="col-sm-9">
+                <h4>Ride Title</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eos veniam
+                  quam
+                  ex.
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="https://via.placeholder.com/100">
+              </div>
+              <div class="col-sm-9">
+                <h4>Ride Title</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eos veniam
+                  quam
+                  ex.
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="https://via.placeholder.com/100">
+              </div>
+              <div class="col-sm-9">
+                <h4>Ride Title</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eos veniam
+                  quam
+                  ex.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Park Name</th>
+                    <th scope="col">Ride Name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">8am</th>
+                    <td>Magic Kingdom</td>
+                    <td>Space Mountain</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10am</th>
+                    <td>Hollywood Studio</td>
+                    <td>Rock N Roller Coaster</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12am</th>
+                    <td>Epcot</td>
+                    <td>Test Track</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- Column with ride pic and description to add to your schedule, and add button below to add to your schedule -->
-    <div class="col-lg-4">
-      <h4 class="column-header">Create your Disney experience:</h4>
-      <br>
-
-      <!-- First card -->
-      <div class="card" style="width: 18rem;">
-  <img src="https://c.navfile.com/images/walt-disney-world-resort/space-mountain-tunnel-blue.jpg" class="card-img-top img-fluid" alt="...">
-  <div class="card-body">
-    <h4 class="card-title">Space Mountain!</h4>
-    <p class="card-text">Blast off on a rip-roaring rocket on this rollercoaster in the dark.</p>
-    <a href="#" class="btn btn-primary add-schedule-btn">Add this to your schedule!</a>
   </div>
-      </div>
-      <br>
+</div><br>
 
-      <!-- Second card -->
-            <div class="card" style="width: 18rem;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Splash_Mountain_at_Disneyland.JPG" class="card-img-top img-fluid" alt="...">
-  <div class="card-body">
-    <h4 class="card-title">Splash Mountain!</h4>
-    <p class="card-text">Drop into a whimsical world on this thrilling log-flume adventure.</p>
-    <a href="#" class="btn btn-primary">Add this to your schedule!</a>
-  </div>
-      </div>
-      <br>
-      
-      <!-- Third card -->
-                  <div class="card" style="width: 18rem;">
-  <img src="http://disneyexaminer.com/wp-content/uploads/2015/10/disneyland-big-thunder-mountain.jpg" class="card-img-top img-fluid" alt="...">
-  <div class="card-body">
-    <h4 class="card-title">Thunder Mountain!</h4>
-    <p class="card-text">Race through a haunted gold mine on a speeding mine train.</p>
-    <a href="#" class="btn btn-primary">Add this to your schedule!</a>
-  </div>
-      </div>
 
-    <!-- End of column -->
-    </div>
-
-    <!-- Column with picture and time of ride that continously updates as you add to your schedule -->
- <div class="col-lg-4">
-      <h4 class="column-header">View your Disney experience:</h4>
-      <br>
-
-      <!-- First card -->
-      <div class="card" style="width: 18rem;">
-  <img src="https://www.orlandodatenightguide.com/wp-content/uploads/2018/07/space-mountain-magic-kingdom-disney-after-hours.jpg" class="card-img-top img-fluid" alt="...">
-  <div class="card-body">
-    <h4 class="card-title">9AM: Space Mountain!</h4>
-    <p class="card-text">Head over to Tomorrowland to check out this Disney classic!</p>
-    <a href="#" class="btn btn-primary">Learn more!</a>
-  </div>
-      </div>
-      <br>
-
-      <!-- Second card -->
-            <div class="card" style="width: 18rem;">
-  <img src="http://disneydaybyday.com/wp-content/uploads/2012/08/Splash-Mountain.jpg" class="card-img-top img-fluid" alt="...">
-  <div class="card-body">
-    <h4 class="card-title">11AM: Splash Mountain!</h4>
-    <p class="card-text">Big drops are ahead when you find yourself in Frontierland.</p>
-    <a href="#" class="btn btn-primary">Add this to your schedule!</a>
-  </div>
-      </div>
-      <br>
-
-      <!-- Third card -->
-            <div class="card" style="width: 18rem;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Big_Thunder_Mountain_Entrance_Sign_at_Magic_Kingdom.jpg" class="card-img-top img-fluid" alt="...">
-  <div class="card-body">
-    <h4 class="card-title">1PM: Thunder Mountain!</h4>
-    <p class="card-text">Make your way to Frontierland for this thrilling coaster-style ride.</p>
-    <a href="#" class="btn btn-primary">Add this to your schedule!</a>
-  </div>
-      </div>
-
-    <!-- End of column -->
-    </div>
-
-<!-- End of row -->
-</div>
-
-<!-- End of container -->
-</div>
-<br>
-
-<!-- Footer -->
-<footer class="footer mt-auto py-3">
+<footer class="card-footer mt-auto py-3">
   <div class="container">
-    <span class="text-muted">Place sticky footer content here.</span>
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- <div class="card"> -->
+        <div class="card-body">
+          <h4>Contact us!</h4>
+          <p><a href="#" class="links"><i class="fab fa-facebook-square"></i> Facebook</a></p>
+          <p><a href="#" class="links"><i class="fab fa-twitter-square"></i> Twitter</a></p>
+          <p><a href="#" class="links"><i class="fab fa-instagram"></i> Instagram</a></p>
+          <p><a href="#" class="links"><i class="fas fa-envelope-open-text"></i> Email</a></p>
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="col-lg-6">
+        <!-- <div class="card"> -->
+        <div class="card-body">
+          <h4>Disney Information</h4>
+          <p><a href="https://disneyworld.disney.go.com/admission/" target="_blank" class="links"><i
+                class="fas fa-ticket-alt"></i> Parks and
+              Tickets</a>
+          </p>
+          <p><a href="https://disneyworld.disney.go.com/resorts/" target="_blank" class="links"><i
+                class="fas fa-hotel"></i> Places to
+              Stay</a></p>
+          <p><a href="https://disneyworld.disney.go.com/activities/" target="_blank" class="links"><i
+                class="fas fa-calendar-alt"></i> Things to
+              Do</a></p>
+          <p><a
+              href="https://www.shopdisney.com/property/disney-parks/walt-disney-world?CMP=syn-dcom:dcomm_parks_WDW_SDPRedirect_SiteNav_GearUpForYourVacation_efc280559"
+              target="_blank" class="links"><i class="fas fa-shopping-cart"></i> Shop</a>
+          </p>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
   </div>
 </footer>
 
-<!-- jQuery script tag -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!-- JS Popper script tag -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<!-- Bootstrap JS script tag --> 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!-- Link to JS index file with logic for page -->
-<script src="/js/index.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
