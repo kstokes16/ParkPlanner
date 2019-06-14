@@ -2,9 +2,21 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  app.get("/api/create-plan", function(req, res) {
+    db.Plan.findAll({
+      // where: {
+      //   date: req.body.date,
+      //   park: req.body.park,
+      // }
+    }).then(function(dbResponse) {
+      // waitTimes = [];
+      // for (i=0; i < dbResponse.length; i++) {
+      // if (dbResponse[i].waitTime < 30) {
+        // dbResponse[i].waitTimes.push(waitTimes);
+        // console.log(waitTimes);
+      // }
+      // }
+      res.json(dbResponse);
     });
   });
 
