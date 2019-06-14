@@ -61,3 +61,18 @@ html, body {
     background-color: lightslategray;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.nav-tabs {
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.blue-text {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.modal-body {
+    padding: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
