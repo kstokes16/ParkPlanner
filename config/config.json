@@ -2,14 +2,15 @@
   "development": {
     "username": "root",
     "password": "Gators14!",
-    "database": "burgers_db",
-    "host": "localhost",
+    "database": "disneyStuff",
+    "host": "127.0.0.1",
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "lovedaddy",
-    "database": "testdb",
+    "password": "process.env.DBPASSWORD",
+    "database": "disneyStuff",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
