@@ -19,7 +19,7 @@
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/user">User Login</a>
+          <a class="nav-link" href="/user" id="theBtn">User Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/example">Example Routes</a>
@@ -43,16 +43,116 @@
   </video>
   <div class="full-screen-video-content">
     We take the stress out of planning your vacation
-    <button id="sign-up" type="button" class="btn btn-info">Sign Up with us!</button>
+    {{!-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Sign up or Login!</button> --}}
+
   </div>
 </div>
 
 
+<!--Modal: Login / Register Form-->
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">Sign
+    up or
+    Login!</a>
+</div>
+
+<!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+              Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+              Register</a>
+          </li>
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fas fa-at"></i> User name or
+                    Email</label>
+                  <input type="user-name-or-email" class="form-control" id="user-login-name"
+                    aria-describedby="emailHelp" placeholder="johnSmith@gmail.com">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1"><i class="fas fa-lock"></i> Password</label>
+                  <input type="password" class="form-control" id="user-login-password" placeholder="Password">
+                </div>
+              </form>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <button type="button" class="btn-secondary" data-dismiss="modal" id="close">Close</button>
+              <a href="/user"><button type="button" class="btn-primary" id="user-login">Login</button></a>
+            </div>
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fas fa-at"></i> Email address</label>
+                  <input type="email" class="form-control" id="new-user-name" aria-describedby="emailHelp"
+                    placeholder="johnSmith@gmail.com">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1"><i class="fas fa-lock"></i> Password</label>
+                  <input type="password" class="form-control" id="new-user-password1" placeholder="Password">
+                  <small id="passwordHelpBlock" class="form-text text-muted">
+                    Your password must be 8-20 characters long, contain letters and numbers, and
+                    must not contain spaces, special characters, or emoji.
+                  </small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1"><i class="fas fa-lock"></i> Confirm
+                    Password</label>
+                  <input type="password" class="form-control" id="new-user-password2" placeholder="Confirm Password">
+                </div>
+              </form>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <button type="button" class="btn-secondary" data-dismiss="modal" id="close">Close</button>
+              <a href="/user"><button type="button" class="btn-primary" id="user-submit">Submit</button></a>
+            </div>
+          </div>
+          <!--/.Panel 8-->
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--- --->
+
+
+<!-- Footer -->
 <footer class="card-footer mt-auto py-3">
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <!-- <div class="card"> -->
         <div class="card-body">
           <h4>Contact us!</h4>
           <p><a href="#" class="links"><i class="fab fa-facebook-square"></i> Facebook</a></p>
@@ -60,10 +160,8 @@
           <p><a href="#" class="links"><i class="fab fa-instagram"></i> Instagram</a></p>
           <p><a href="#" class="links"><i class="fas fa-envelope-open-text"></i> Email</a></p>
         </div>
-        <!-- </div> -->
       </div>
       <div class="col-lg-6">
-        <!-- <div class="card"> -->
         <div class="card-body">
           <h4>Disney Information</h4>
           <p><a href="https://disneyworld.disney.go.com/admission/" target="_blank" class="links"><i
@@ -81,11 +179,11 @@
               target="_blank" class="links"><i class="fas fa-shopping-cart"></i> Shop</a>
           </p>
         </div>
-        <!-- </div> -->
       </div>
     </div>
   </div>
 </footer>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
