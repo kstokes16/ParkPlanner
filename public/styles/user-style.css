@@ -18,3 +18,23 @@ h1 {
     color: black;
     font-family: 'Courier New', Courier, monospace;
 }
+
+#close {
+    color: white;
+    text-align: center;
+    border: solid 1px lightslategray;
+    background-color: lightslategray;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#submit {
+    color: white;
+    text-align: center;
+    border: solid 1px lightslategray;
+    background-color: lightslategray;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#plan-title, #plan-date {
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -3,7 +3,7 @@
   <nav class="navbar navbar-light light-blue lighten-4">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="./index.html">Park Planner</a>
+    <a class="navbar-brand" href="/">Park Planner</a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
@@ -16,13 +16,13 @@
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">User Login</a>
+          <a class="nav-link" href="/user">User Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./examples.html">Example Routes</a>
+          <a class="nav-link" href="/example">Example Routes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://disneyworld.disney.go.com/" target="_blank">Disney
@@ -45,7 +45,16 @@
   </div>
 </div><br>
 <div class="row">
-  <div class="col-lg-3">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <h4 id="user-title">Created plan Title</h4>
+  </div>
+  <div class="col-sm-4">
+    <h4 id="user-date"> Date of trip: </h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
     <div class="card">
       <div class="card-body">
         <a href="#">
@@ -59,47 +68,50 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-9">
+  <div class="col-md-9">
     <div class="card">
       <div class="card-body">
         <div class="row">
           <div class="col-sm-6">
             <div class="row">
-              <div class="col-sm-3">
+              <div class="col-md-3">
                 <img src="https://via.placeholder.com/100">
               </div>
-              <div class="col-sm-9">
+              <div class="col-md-9">
                 <h4>Ride Title</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eos veniam
                   quam
                   ex.
                 </p>
+                <p>When to ride: </p>
               </div>
             </div>
             <hr>
             <div class="row">
-              <div class="col-sm-3">
+              <div class="col-md-3">
                 <img src="https://via.placeholder.com/100">
               </div>
-              <div class="col-sm-9">
+              <div class="col-md-9">
                 <h4>Ride Title</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eos veniam
                   quam
                   ex.
                 </p>
+                <p>When to ride: </p>
               </div>
             </div>
             <hr>
             <div class="row">
-              <div class="col-sm-3">
+              <div class="col-md-3">
                 <img src="https://via.placeholder.com/100">
               </div>
-              <div class="col-sm-9">
+              <div class="col-md-9">
                 <h4>Ride Title</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eos veniam
                   quam
                   ex.
                 </p>
+                <p>When to ride: </p>
               </div>
             </div>
           </div>
@@ -109,29 +121,42 @@
                 <thead>
                   <tr>
                     <th scope="col"></th>
-                    <th scope="col">Park Name</th>
                     <th scope="col">Ride Name</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">8am</th>
-                    <td>Magic Kingdom</td>
                     <td>Space Mountain</td>
                   </tr>
                   <tr>
                     <th scope="row">10am</th>
-                    <td>Hollywood Studio</td>
                     <td>Rock N Roller Coaster</td>
                   </tr>
                   <tr>
-                    <th scope="row">12am</th>
-                    <td>Epcot</td>
+                    <th scope="row">12pm</th>
                     <td>Test Track</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2pm</th>
+                    <td>Splash Mountain</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4pm</th>
+                    <td>The Haunted Mansion</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6pm</th>
+                    <td>Pirates of the Caribbean</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8pm</th>
+                    <td>Soarin'</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            <button type="button" class="btn-info" id="saved-plans-btn">Save your Plan!</button>
           </div>
         </div>
       </div>
