@@ -1,6 +1,6 @@
 // hiding "Create Plan" elements on homepage
 
-$(document).ready(function() {
+$(document).ready(function () {
   $("#create-plan-row").hide();
   $("#create-plan-row-2").hide();
   $("#create-plan-row-3").hide();
@@ -16,14 +16,14 @@ $("#user-submit").on("click", function (event) {
     password: $("#new-user-password1").val().trim()
   }
 
-      // ajax POST to user endpoint 
-      $.ajax("/api/user", {
-        method: "POST",
-        data: userInfo
-      })
-        .done(function(data) {
-        console.log("You have successfully added a new user.");
-        console.log(data);
+  // ajax POST to user endpoint 
+  $.ajax("/api/user", {
+    method: "POST",
+    data: userInfo
+  })
+    .done(function (data) {
+      console.log("You have successfully added a new user.");
+      console.log(data);
     })
 });
 
