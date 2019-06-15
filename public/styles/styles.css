@@ -24,3 +24,7 @@ h1 {
   background-color: lightblue;
   font-family: 'Courier New', Courier, monospace;
 }
+
+.card {
+  box-shadow: 3px 3px 5px darkgrey;
+}

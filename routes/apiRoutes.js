@@ -8,6 +8,20 @@ module.exports = function (app) {
     });
   });
 
+  app.post("/api/plan", function(req, res){
+    db.Plan.create({
+      where: {
+        title: req.body.title,
+        planDate: req.body.planDate
+      }
+    }).then(function(data){
+      res.json(data);
+      res.render("/create-plan");
+    });
+  });
+
+  //??
+
   app.get("/api/park", function (req, res) {
     db.Park.findAll({}).then(function (data) {
       res.json(data);
@@ -27,11 +41,11 @@ module.exports = function (app) {
   });
 
   // Create a new example
-  // app.post("/api/user", function (req, res) {
-  //   db.User.create(req.body).then(function (dbExample) {
-  //     res.json(dbExample);
-  //   });
-  // });
+  app.post("/api/user", function (req, res) {
+    db.User.create(req.body).then(function (data) {
+      res.json(data);
+    });
+  });
 
   // Delete an example by id
   //   app.delete("/api/examples/:id", function (req, res) {
