@@ -11,15 +11,16 @@ module.exports = function (app) {
   // Load user page after login
   // Find all from Park model
   app.get("/user", function(req, res) {
-    db.Park.findAll({}).then(function() {
+    db.User.findAll({}).then(function() {
       res.render("user", {
         style: "user-style.css"
       });
     });
-  // });
+  });
+
 
 //JQuery
-$.get() find all where park = (parkname from user click)
+// $.get() find all where park = (parkname from user click)
   //respond with rides from Ridenames table
 
 // $.post each time user clicks on a ride
@@ -28,30 +29,27 @@ $.get() find all where park = (parkname from user click)
 
 // $.post to save the plans
 
-  // Load user created plans page
-  app.get("/user/create-plan", function(req, res) {
-    //$.onclick
+  // Build active user plan
+  app.get("/user/create-plan/:id", function(req, res) {
     db.Plan.findAll({
+      where: {id: req.params.id}
     }).then(function() {
       res.render("create-plan", {
         style: "create-plan.css"
       });
     });
   });
-  // });
 
   // Load user created plans page
-  app.get("/user/saved-plans", function(req, res) {
-    //$.onclick
+  app.get("/user/saved-plans/:user", function(req, res) {
     db.Plan.findAll({
-       //username: ???
+      where: {user: req.params.user}
     }).then(function() {
       res.render("saved-plans", {
         style: "styles.css"
       });
     });
   });
-  // });
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {

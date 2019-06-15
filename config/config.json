@@ -1,13 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": {
-      "use_env_variable": "DBPASSWORD"
-    },
-=======
-    "password": "lovedaddy",
->>>>>>> b706ec8002a584f1c6c82a1724d643a1b7f7dd3e
+    "password": "Shalom77&",
     "database": "disneyStuff",
     "host": "127.0.0.1",
     "port": 3306,
