@@ -23,12 +23,10 @@ module.exports = function (app) {
 
   // Load user created plans page
   app.get("/user/create-plan", function (req, res) {
-    // db.Plan.findAll({}).then(function() {
     res.render("create-plan", {
       style: "create-plan.css"
     });
   });
-  // });
 
   // Load user saved plans page
   app.get("/user/saved-plans", function (req, res) {

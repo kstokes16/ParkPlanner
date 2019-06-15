@@ -8,7 +8,9 @@ module.exports = function (app) {
     });
   });
 
+
   // GET all parks -- works
+
   app.get("/api/park", function (req, res) {
     db.Park.findAll({}).then(function (data) {
       res.json(data);
@@ -28,6 +30,7 @@ module.exports = function (app) {
       res.json(data);
     });
   });
+
 
   // POST a new user -- working 
   app.post("/api/user", function(req, res) {
