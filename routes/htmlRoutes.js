@@ -1,6 +1,6 @@
 var db = require("../models");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Load index page
   app.get("/", function(req, res) {
       res.render("index", {
@@ -13,10 +13,10 @@ module.exports = function(app) {
   app.get("/user", function(req, res) {
     db.Park.findAll({}).then(function() {
       res.render("user", {
-      style: "user-style.css"
+        style: "user-style.css"
       });
     });
-  });
+  // });
 
 //JQuery
 $.get() find all where park = (parkname from user click)
@@ -38,6 +38,7 @@ $.get() find all where park = (parkname from user click)
       });
     });
   });
+  // });
 
   // Load user created plans page
   app.get("/user/saved-plans", function(req, res) {
@@ -50,9 +51,10 @@ $.get() find all where park = (parkname from user click)
       });
     });
   });
+  // });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
 };
