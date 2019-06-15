@@ -3,19 +3,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all examples
   app.get("/api/create-plan", function(req, res) {
-    db.Plan.findAll({
-      // where: {
-      //   date: req.body.date,
-      //   park: req.body.park,
-      // }
-    }).then(function(dbResponse) {
-      // waitTimes = [];
-      // for (i=0; i < dbResponse.length; i++) {
-      // if (dbResponse[i].waitTime < 30) {
-        // dbResponse[i].waitTimes.push(waitTimes);
-        // console.log(waitTimes);
-      // }
-      // }
+    db.Plan.findAll().then(function(dbResponse) {
       res.json(dbResponse);
     });
   });
