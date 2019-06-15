@@ -40,8 +40,17 @@ module.exports = function (app) {
         ride: dbData
       });
       console.log(dbData);
+      for (i=0; i < dbData.length; i++) {
+      var thisRide = dbData[i].dataValues.rideTitle;
+      db.thisRide.findAll({
+        where: {
+          date: "date variable",
+        }  
+      }).then(function(waitTimes) {
+        if (waitTimes[i].waitMin < 30) {
+          console.log(waitTimes.useTime)}});
+      }});
     });
-  });
 
   // Load user created plans page
   app.get("/user/saved-plans/:user", function(req, res) {
