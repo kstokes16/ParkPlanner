@@ -3,6 +3,13 @@ $(document).ready(function() {
     $("#create-plan-row").hide();
     $("#create-plan-row-2").hide();
     $("#create-plan-row-3").hide();
+
+    $("#submit").on("click", function (event) {
+      console.log("you clicked me");
+      // $("#create-plan-row").load();
+      // $("#create-plan-row-2").load();
+      // $("#create-plan-row-3").load();
+    });
   });
   
   // submit button on homepage modal 
@@ -25,3 +32,4 @@ $(document).ready(function() {
           console.log(data);
       })
   });
+
