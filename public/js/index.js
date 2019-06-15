@@ -1,15 +1,23 @@
-// check to see if jQuery is working
+// When signing up, users will need to submit username and password,
 $("#user-submit").on("click", function (event) {
+  console.log("JS is working");
   event.preventDefault();
 
-  var userName = $("#user-login-name").val().trim();
-  var password = $("#user-login-password").val().trim();
+  var userInfo = {
+    username: $("#new-user-name").val().trim(),
+    password: $("#new-user-password1").val().trim()
+  }
 
-  console.log("User name is: " + userName);
-  console.log("Password is: " + password);
-
-})
-  
+      // ajax POST to user endpoint 
+      $.ajax("/api/user", {
+        method: "POST",
+        data: userInfo
+      })
+        .done(function(data) {
+        console.log("You have successfully added a new user.");
+        console.log(data);
+    })
+});
 
 // // Get references to page elements
 // var $exampleText = $("#example-text");
@@ -109,4 +117,4 @@ $("#user-submit").on("click", function (event) {
 
 // // Add event listeners to the submit and delete buttons
 // $submitBtn.on("click", handleFormSubmit);
-// $exampleList.on("click", ".delete", handleDeleteBtnClick);
+// $exampleList.on("click", ".delete", handleDeleteBtnClick)
