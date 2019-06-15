@@ -1,5 +1,7 @@
 var db = require("../models");
 
+//app.post route to Plans API
+
 module.exports = function(app) {
   // Get all examples
   app.get("/api/create-plan", function(req, res) {

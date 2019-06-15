@@ -1,7 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "Shalom77&",
+    "password": {
+      "use_env_variable": "DBPASSWORD"
+    },
     "database": "disneyStuff",
     "host": "127.0.0.1",
     "port": 3306,
@@ -9,7 +11,9 @@
   },
   "test": {
     "username": "root",
-    "password": "process.env.DBPASSWORD",
+    "password": {
+      "use_env_variable": "DBPASSWORD"
+    },
     "database": "disneyStuff",
     "host": "localhost",
     "dialect": "mysql",
