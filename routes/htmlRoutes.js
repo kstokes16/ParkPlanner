@@ -13,19 +13,24 @@ module.exports = function (app) {
   // Load user page after login
   app.get("/user", function (req, res) {
     // db.Plan.findAll({}).then(function () {
-      res.render("user", {
-        style: "user-style.css"
-      });
+    res.render("user", {
+      style: "user-style.css"
     });
+  });
   // });
 
   // Load user created plans page
-  app.get("/user/create-plan", function (req, res) {
-    // db.Plan.findAll({}).then(function() {
-    res.render("create-plan", {
-      style: "create-plan.css"
-    });
-  });
+  // app.get("/user/create-plan", function (req, res) {
+  //   // db.Plan.findOne({
+  //   //   where: {
+  //   //     id: req.params.id
+  //   //   }
+  //   }).then(function () {
+  //     res.render("create-plan", {
+  //       plan: plan,
+  //       style: "create-plan.css"
+  //     });
+  //   });
   // });
 
   // Load user saved plans page
