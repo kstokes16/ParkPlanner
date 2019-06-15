@@ -1,26 +1,15 @@
 var db = require("../models");
 
 module.exports = function (app) {
-  // Get all examples
-  app.get("/api/create-plan/", function (req, res) {
-    db.Plan.findAll({}).then(function (data) {
+  // GET all users -- working
+  app.get("/api/user", function (req, res) {
+    db.Users.findAll({}).then(function (data) {
       res.json(data);
     });
   });
 
-  app.post("/api/plan", function(req, res){
-    db.Plan.create({
-      where: {
-        title: req.body.title,
-        planDate: req.body.planDate
-      }
-    }).then(function(data){
-      res.json(data);
-      res.render("/create-plan");
-    });
-  });
 
-  //??
+  // GET all parks -- works
 
   app.get("/api/park", function (req, res) {
     db.Park.findAll({}).then(function (data) {
@@ -28,21 +17,31 @@ module.exports = function (app) {
     });
   });
 
+  // GET all rides --- working
   app.get("/api/rides", function (req, res) {
     db.Rides.findAll({}).then(function (data) {
       res.json(data);
     });
   });
 
-  app.get("/api/user", function (req, res) {
-    db.User.findAll({}).then(function (data) {
+  // GET all plans -- working
+  app.get("/api/plan", function (req, res) {
+    db.Plans.findAll({}).then(function (data) {
       res.json(data);
     });
   });
 
-  // Create a new example
-  app.post("/api/user", function (req, res) {
-    db.User.create(req.body).then(function (data) {
+
+  // POST a new user -- working 
+  app.post("/api/user", function(req, res) {
+    db.Users.create(req.body).then(function(data) {
+      res.json(data);
+    });
+  });
+
+  // POST a new plan -- working
+  app.post("/api/plan", function(req, res) {
+    db.Plans.create(req.body).then(function(data) {
       res.json(data);
     });
   });
