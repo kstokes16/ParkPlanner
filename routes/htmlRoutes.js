@@ -5,7 +5,8 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     // db.Plan.findAll({}).then(function() {
     res.render("index", {
-      style: "index-style.css"
+      style: "index-style.css",
+      javascript: "index.js"
     });
   });
   // });
@@ -14,7 +15,8 @@ module.exports = function (app) {
   app.get("/user", function (req, res) {
     // db.Plan.findAll({}).then(function () {
     res.render("user", {
-      style: "user-style.css"
+      style: "user-style.css",
+      javascript: "user.js"
     });
   });
   // });
