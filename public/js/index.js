@@ -1,11 +1,3 @@
-// hiding "Create Plan" elements on homepage
-
-$(document).ready(function () {
-  $("#create-plan-row").hide();
-  $("#create-plan-row-2").hide();
-  $("#create-plan-row-3").hide();
-});
-
 // submit button on homepage modal 
 $("#user-submit").on("click", function (event) {
   console.log("JS is working");
@@ -24,6 +16,7 @@ $("#user-submit").on("click", function (event) {
     .done(function (data) {
       console.log("You have successfully added a new user.");
       console.log(data);
+      window.location.href = '/user'
     })
 });
 
