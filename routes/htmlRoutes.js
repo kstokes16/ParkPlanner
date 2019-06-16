@@ -39,17 +39,20 @@ module.exports = function (app) {
         style: "create-plan.css",
         ride: dbData
       });
-      console.log(dbData);
-      for (i=0; i < dbData.length; i++) {
-      var thisRide = dbData[i].dataValues.rideTitle;
-      db.thisRide.findAll({
-        where: {
-          date: "date variable",
-        }  
-      }).then(function(waitTimes) {
-        if (waitTimes[i].waitMin < 30) {
-          console.log(waitTimes.useTime)}});
-      }});
+      if (dbData.length > 0){
+        for (i=0; i < dbData.length; i++) {
+          var thisRide = dbData[i].rideTitle;
+          db.pirates_of_caribbean.findAll({
+            where: {
+              waitMin: 20
+            }  
+          }).then(function(x) {
+            console.log(x);
+            // if (waitTimes[i].waitMin < 30) 
+            //   console.log(waitTimes.useTime)
+          })
+        }
+    }})
     });
 
   // Load user created plans page
@@ -67,4 +70,4 @@ module.exports = function (app) {
   app.get("*", function (req, res) {
     res.render("404");
   });
-};
+  }
