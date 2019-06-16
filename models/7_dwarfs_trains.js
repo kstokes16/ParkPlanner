@@ -1,10 +1,10 @@
 module.exports = function (sequelize, DataTypes) {
-    var Spaceship_earth = sequelize.define("Spaceship_earth", {
+    var Seven_dwarfs_trains = sequelize.define("Seven_dwarfs_trains", {
         title: DataTypes.STRING,
         useDate: DataTypes.STRING,     
         useTime: DataTypes.STRING,
         waitMin: DataTypes.INTEGER,
         actualMin: DataTypes.INTEGER,
     });
-    return Spaceship_earth;
+    return Seven_dwarfs_trains;
  };
