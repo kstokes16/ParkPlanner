@@ -24,31 +24,6 @@ $("#user-submit").on("click", function (event) {
 //   console.log("We are making it to the submit plan part.");
 //   event.preventDefault();
 
-//   // taking in what has been input on the page and posting it to the plans database
-//   var tripInfo = {
-//     title: $("#plan-title").val().trim(),
-//     planDate: $("#plan-date").val().trim()
-//     user: 
-//     park:
-//     ride8AM:
-//     ride10AM:
-//     ride12PM:
-//     ride2PM:
-//     ride4PM:
-//     ride6PM:
-//     ride8PM: 
-//   }
-
-//   // AJAX post to plan endpoint
-//   $.ajax("/api/plan", {
-//     method: "POST",
-//     data: tripInfo
-//   })
-//     .done(function(data) {
-//     console.log("You have successfully added a new user.");
-//     console.log(data);
-// })
-// }
 
 // // // Get references to page elements
 // // var $exampleText = $("#example-text");
