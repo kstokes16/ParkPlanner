@@ -4,7 +4,8 @@ module.exports = function (app) {
   // Load index page
   app.get("/", function(req, res) {
       res.render("index", {
-        style: "index-style.css"
+        style: "index-style.css",
+        javascript: "index.js"
       });
     });
 
@@ -13,6 +14,14 @@ module.exports = function (app) {
         style: "example.css"
       });
     });
+  // Load user page after login
+  app.get("/user", function (req, res) {
+    // db.Plan.findAll({}).then(function () {
+    res.render("user", {
+      style: "user-style.css",
+      javascript: "user.js"
+    });
+  });
 
   // Load user page after login
   // Find all from Park model
@@ -24,10 +33,6 @@ module.exports = function (app) {
     });
   });
 
-
-//JQuery
-// $.get() find all where park = (parkname from user click)
-  //respond with rides from Ridenames table
 
   // Build active user plan
   app.get("/user/create-plan/", function(req, res) {
@@ -70,4 +75,4 @@ module.exports = function (app) {
   app.get("*", function (req, res) {
     res.render("404");
   });
-  }
+  };

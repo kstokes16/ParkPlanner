@@ -39,6 +39,19 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
 }
 
+#saved-plans-btn {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    border: solid 1px lightslategray;
+    background-color: lightslategray;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#user-title, #user-date {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .card {
     box-shadow: 3px 3px 5px darkgrey
 }
