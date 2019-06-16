@@ -1,10 +1,10 @@
 module.exports = function (sequelize, DataTypes) {
-    var Seven_dwarfs_train = sequelize.define("Seven_dwarfs_train", {
+    var Rock_n_rollercoasters = sequelize.define("Rock_n_rollercoasters", {
         title: DataTypes.STRING,
         useDate: DataTypes.STRING,     
         useTime: DataTypes.STRING,
         waitMin: DataTypes.INTEGER,
         actualMin: DataTypes.INTEGER,
     });
-    return Seven_dwarfs_train;
+    return Rock_n_rollercoasters;
  };
