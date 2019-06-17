@@ -1,4 +1,6 @@
 // hiding "Create Plan" elements on homepage
+
+
 $(document).ready(function() {
   $("#create-plan-row").hide();
   $("#create-plan-row-2").hide();
@@ -12,12 +14,12 @@ $("#submit").click(function() {
   console.log("I've been clicked");
 
   console.log("scrolling");
-  $("html, body").animate(
-    {
-      scrollTop: $("#create-plan-row").offset().top
-    },
-    2000
-  );
+  // $("html, body").animate(
+  //   {
+  //     scrollTop: $("#create-plan-row").offset().top
+  //   },
+  //   2000
+  // );
 });
 
 $(".card-title").on("click", function() {
