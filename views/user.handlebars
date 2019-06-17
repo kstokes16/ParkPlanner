@@ -182,15 +182,15 @@
       <div class="card-body">
         <div class="row">
           <div class="col-sm-6">
+
+            {{#each ride}}
             <div class="row">
               <div class="col-md-3">
-                <img src="https://via.placeholder.com/100">
+                <img src="../public/media/{{ride.imgURL}}">
               </div>
               <div class="col-md-9">
-                <h4>Ride Title</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eos veniam
-                  quam
-                  ex.
+                <h4>{{this.rideTitle}}</h4>
+                <p>{{this.rideDescription}}
                 </p>
                 <!-- Dropdown to select ride here -->
                 <p>Pick a ride time:  <select id="rideTimes">
@@ -208,6 +208,8 @@
               </div>
             </div>
             <hr>
+            {{/each}}
+            
             <div class="row">
               <div class="col-md-3">
                 <img src="https://via.placeholder.com/100">

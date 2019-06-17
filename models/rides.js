@@ -1,9 +1,10 @@
 module.exports = function (sequelize, DataTypes) {
-    var Rides = sequelize.define("Rides", {
+    var rides = sequelize.define("rides", {
         rideTitle: DataTypes.STRING,
+        rideName: DataTypes.STRING,
         park: DataTypes.STRING,
         rideDescription: DataTypes.STRING,
-        imageURL: DataTypes.STRING
+        imgURL: DataTypes.STRING
     });
-    return Rides;
+    return rides;
 };

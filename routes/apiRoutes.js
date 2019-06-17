@@ -19,7 +19,7 @@ module.exports = function (app) {
 
   // GET all rides --- working
   app.get("/api/rides", function (req, res) {
-    db.Rides.findAll({}).then(function (data) {
+    db.rides.findAll({}).then(function (data) {
       res.json(data);
     });
   });
@@ -36,6 +36,7 @@ module.exports = function (app) {
   app.post("/api/user", function(req, res) {
     db.User.create(req.body).then(function(data) {
       res.json(data);
+      console.log(data);
     });
   });
 
@@ -44,4 +45,13 @@ module.exports = function (app) {
     db.Plans.create(req.body).then(function(data) {
       res.json(data);
     });
-  });}
+  });
+
+  app.get("/api/rides", function(req,res) {
+    db.rides.findAll({
+      where: {park: req.body.currentPark}
+    }).then(function(rideList) {
+      res.json(rideList)
+  });  
+});
+}

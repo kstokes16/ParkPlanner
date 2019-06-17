@@ -149,12 +149,23 @@ $("#user-submit").on("click", function (event) {
 // // // Add event listeners to the submit and delete buttons
 // // $submitBtn.on("click", handleFormSubmit);
 // // $exampleList.on("click", ".delete", handleDeleteBtnClick)
+var getRides = function() {
+  return $.ajax({
+    url: "api/rides",
+    type: "GET"
+  }).done(function (data) {
+    console.log("Successfully returned to app");
+    console.log(data);
+    // window.location.href = '/user'
+  })
+};
 
 currentPark = [];
 $(".park").on("click", function() {
   delete currentPark;
   currentPark = $(this).data("parkname");
   console.log(currentPark);
+  getRides(currentPark);
 });
 
 currentDate = [];
@@ -163,3 +174,4 @@ $("#submit").on("click", function() {
   currentDate = $("#plan-date").val()
   console.log("current Plan date: " + currentDate);
 });
+
