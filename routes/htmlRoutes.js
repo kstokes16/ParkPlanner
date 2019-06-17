@@ -1,3 +1,5 @@
+/* eslint-disable indent */
+/* eslint-disable prettier/prettier */
 var db = require("../models");
 
 module.exports = function (app) {
@@ -15,20 +17,20 @@ module.exports = function (app) {
       });
     });
   // Load user page after login
-  app.get("/user", function (req, res) {
-    // db.Plan.findAll({}).then(function () {
-    res.render("user", {
-      style: "user-style.css",
-      javascript: "user.js"
-    });
-  });
+  // app.get("/user", function (req, res) {
+  //   // db.Plan.findAll({}).then(function () {
+  //   res.render("user", {
+  //     style: "user-style.css",
+  //     javascript: "user.js"
+  //   });
+  // });
 
   // Load user page after login
   // Find all from Park model
   app.get("/user", function(req, res) {
     db.User.findAll({}).then(function() {
       res.render("user", {
-        style: "user-style.css"
+        style: "user-style.css",
       });
     });
   });
@@ -70,6 +72,20 @@ module.exports = function (app) {
       });
     });
   });
+
+  // Render meet the tem page
+  app.get("/about-us", function(req, res) {
+    res.render("meet-the-team", {
+      style: "meet-the-team.css"
+    });
+  });
+
+    // Render meet the tem page
+    app.get("/user/saved-plans", function(req, res) {
+      res.render("saved-plans", {
+        style: "saved-plans.css"
+      });
+    });
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {

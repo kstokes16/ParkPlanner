@@ -1,14 +1,14 @@
-// submit button on homepage modal 
+// submit button on homepage modal for new user
 $("#user-submit").on("click", function (event) {
   console.log("JS is working");
   event.preventDefault();
 
+// registration for new user 
   var userInfo = {
-    username: $("#new-user-name").val().trim(),
+    userName: $("#new-user-name").val().trim(),
     password: $("#new-user-password1").val().trim()
   }
-
-  // ajax POST to user endpoint 
+  // ajax POST to user endpoint -- NEW USER
   $.ajax("/api/user", {
     method: "POST",
     data: userInfo
@@ -18,37 +18,37 @@ $("#user-submit").on("click", function (event) {
       console.log(data);
       window.location.href = '/user'
     })
-});
+  });
+
+  // end of POST for new user
+
+  // submit button on homepage modal for member logging in
+  $("#user-login").on("click", function (event) {
+    event.preventDefault();
+
+    // taking in user submitted info
+    var memberInfo = {
+      userName: $("#user-login-name").val().trim(),
+      password: $("#user-login-password").val().trim()
+    }
+
+    $.ajax("/api/user", {
+      method: "POST",
+      data: memberInfo
+    })
+    .done(function (data) {
+      console.log("Successfully returned to app");
+      console.log(data);
+      window.location.href = '/user'
+    })
+  });
+
+// login for registered member
 
 // $("#user-submit-plan").on("click", function (event) {
 //   console.log("We are making it to the submit plan part.");
 //   event.preventDefault();
 
-//   // taking in what has been input on the page and posting it to the plans database
-//   var tripInfo = {
-//     title: $("#plan-title").val().trim(),
-//     planDate: $("#plan-date").val().trim()
-//     user: 
-//     park:
-//     ride8AM:
-//     ride10AM:
-//     ride12PM:
-//     ride2PM:
-//     ride4PM:
-//     ride6PM:
-//     ride8PM: 
-//   }
-
-//   // AJAX post to plan endpoint
-//   $.ajax("/api/plan", {
-//     method: "POST",
-//     data: tripInfo
-//   })
-//     .done(function(data) {
-//     console.log("You have successfully added a new user.");
-//     console.log(data);
-// })
-// }
 
 // // // Get references to page elements
 // // var $exampleText = $("#example-text");

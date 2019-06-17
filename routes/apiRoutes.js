@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function (app) {
   // GET all users -- working
   app.get("/api/user", function (req, res) {
-    db.Users.findAll({}).then(function (data) {
+    db.User.findAll({}).then(function (data) {
       res.json(data);
     });
   });
@@ -34,7 +34,7 @@ module.exports = function (app) {
 
   // POST a new user -- working 
   app.post("/api/user", function(req, res) {
-    db.Users.create(req.body).then(function(data) {
+    db.User.create(req.body).then(function(data) {
       res.json(data);
     });
   });
@@ -44,12 +44,4 @@ module.exports = function (app) {
     db.Plans.create(req.body).then(function(data) {
       res.json(data);
     });
-  });
-
-  // Delete an example by id
-  //   app.delete("/api/examples/:id", function (req, res) {
-  //     db.Example.destroy({ where: { id: req.params.id } }).then(function () {
-  //       res.json(dbExample);
-  //     });
-  //   });
-};
+  });}

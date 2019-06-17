@@ -59,7 +59,7 @@
     </div>
     <div class="col-lg-7">
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6" id="mk">
           <div class="card" style="width: 18rem;">
             <a href="#" data-toggle="modal" data-target="#basicExampleModal"><img
                 src="https://images.unsplash.com/photo-1555306210-a7dacfb0f72c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
@@ -71,7 +71,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6" id="ak">
         <div class="card" style="width: 18rem;">
           <a href="#" data-toggle="modal" data-target="#basicExampleModal"><img
               src="https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2013/10/DAK-Entrance.jpg"
@@ -85,7 +85,7 @@
     </div>
   </div><br>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-6" id="epcot">
       <div class="card" style="width: 18rem;">
         <a href="#" data-toggle="modal" data-target="#basicExampleModal"><img
             src="https://images.unsplash.com/photo-1485824119360-27e61739eac7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
@@ -97,7 +97,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-6" id="hs">
     <div class="card" style="width: 18rem;">
       <a href="#" data-toggle="modal" data-target="#basicExampleModal"><img
           src="https://orlando-attractions-ssl-dpfmxqguadzjp.netdna-ssl.com/wp-content/uploads/2012/04/Hollywood-Studios-tower.jpg"
@@ -192,6 +192,18 @@
                   quam
                   ex.
                 </p>
+                <!-- Dropdown to select ride here -->
+                <p>Pick a ride time:  <select id="rideTimes">
+                <option value="8AM">8AM</option>
+                <option value="10AM">10AM</option>
+                <option value="12PM">12PM</option>
+                <option value="2PM">2PM</option>
+                <option value="4PM">4PM</option>
+                <option value="6PM">6PM</option>
+                <option value="8PM">8PM</option>
+                </select>
+                </p>
+              <!-- End of dropdown -->
                 <p>When to ride: </p>
               </div>
             </div>
@@ -206,6 +218,19 @@
                   quam
                   ex.
                 </p>
+              <!-- Dropdown to select ride here -->
+              <p>Pick a ride time:  <select id="rideTimes">
+              <option value="8AM">8AM</option>
+              <option value="10AM">10AM</option>
+              <option value="12PM">12PM</option>
+              <option value="2PM">2PM</option>
+              <option value="4PM">4PM</option>
+              <option value="6PM">6PM</option>
+              <option value="8PM">8PM</option>
+              </select>
+              </p>
+              <!-- End of dropdown -->
+
                 <p>When to ride: </p>
               </div>
             </div>
@@ -220,6 +245,19 @@
                   quam
                   ex.
                 </p>
+              <!-- Dropdown to select ride here -->
+              <p>Pick a ride time:  <select id="rideTimes">
+              <option value="8AM">8AM</option>
+              <option value="10AM">10AM</option>
+              <option value="12PM">12PM</option>
+              <option value="2PM">2PM</option>
+              <option value="4PM">4PM</option>
+              <option value="6PM">6PM</option>
+              <option value="8PM">8PM</option>
+              </select>
+              </p>
+              <!-- End of dropdown -->
+
                 <p>When to ride: </p>
               </div>
             </div>
@@ -236,31 +274,31 @@
                 <tbody>
                   <tr>
                     <th scope="row">8am</th>
-                    <td>Space Mountain</td>
+                    <td id="8AM-Ride">Space Mountain</td>
                   </tr>
                   <tr>
                     <th scope="row">10am</th>
-                    <td>Rock N Roller Coaster</td>
+                    <td id="10AM-Ride">Rock N Roller Coaster</td>
                   </tr>
                   <tr>
                     <th scope="row">12pm</th>
-                    <td>Test Track</td>
+                    <td id="12PM-Ride">Test Track</td>
                   </tr>
                   <tr>
                     <th scope="row">2pm</th>
-                    <td>Splash Mountain</td>
+                    <td id="2PM-Ride">Splash Mountain</td>
                   </tr>
                   <tr>
                     <th scope="row">4pm</th>
-                    <td>The Haunted Mansion</td>
+                    <td id="4PM-Ride">The Haunted Mansion</td>
                   </tr>
                   <tr>
                     <th scope="row">6pm</th>
-                    <td>Pirates of the Caribbean</td>
+                    <td id="6PM-Ride">Pirates of the Caribbean</td>
                   </tr>
                   <tr>
                     <th scope="row">8pm</th>
-                    <td>Soarin'</td>
+                    <td id="8PM-Ride">Soarin'</td>
                   </tr>
                 </tbody>
               </table>
@@ -276,24 +314,20 @@
 <!--End of pasted code from create-plan page -->
 
 
-<!-- Beginning of footer -->
+<!-- Footer -->
 <footer class="card-footer mt-auto py-3">
-  <!-- Beginning of footer container -->
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <!-- <div class="card"> -->
         <div class="card-body">
           <h4>Contact us!</h4>
           <p><a href="#" class="links"><i class="fab fa-facebook-square"></i> Facebook</a></p>
           <p><a href="#" class="links"><i class="fab fa-twitter-square"></i> Twitter</a></p>
           <p><a href="#" class="links"><i class="fab fa-instagram"></i> Instagram</a></p>
-          <p><a href="#" class="links"><i class="fas fa-envelope-open-text"></i> Email</a></p>
+          <p><a href="https://github.com/kstokes16/ParkPlanner" class="links"><i class="fab fa-github"></i> GitHub</a></p>
         </div>
-        <!-- </div> -->
       </div>
       <div class="col-lg-6">
-        <!-- <div class="card"> -->
         <div class="card-body">
           <h4>Disney Information</h4>
           <p><a href="https://disneyworld.disney.go.com/admission/" target="_blank" class="links"><i
@@ -311,16 +345,14 @@
               target="_blank" class="links"><i class="fas fa-shopping-cart"></i> Shop</a>
           </p>
         </div>
-        <!-- </div> -->
       </div>
     </div>
-
-<!--End of footer container -->
   </div>
-
-<!-- End of footer -->
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
