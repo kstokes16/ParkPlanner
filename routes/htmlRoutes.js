@@ -1,6 +1,9 @@
 var db = require("../models");
 var Sequelize = require("sequelize");
 const Op = Sequelize.Op;
+// var $ = require("jquery")
+// var pageData = require("../public/js/index")
+
 
 module.exports = function (app) {
   // Load index page
@@ -21,7 +24,7 @@ module.exports = function (app) {
   // Build active user plan
   app.get("/user", function(req, res){
     db.rides.findAll({
-      where: {park: req.body.currentPark}
+      where: {park: "Animal Kingdom"}
   }).then(function(rideList) {
     res.render("user", {
         style: "user-style.css",

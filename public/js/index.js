@@ -149,13 +149,14 @@ $("#user-submit").on("click", function (event) {
 // // // Add event listeners to the submit and delete buttons
 // // $submitBtn.on("click", handleFormSubmit);
 // // $exampleList.on("click", ".delete", handleDeleteBtnClick)
-var getRides = function() {
+var getRides = function(currentPark) {
   return $.ajax({
     url: "api/rides",
-    type: "GET"
+    type: "GET",
+    where: {park: currentPark}
   }).done(function (data) {
-    console.log("Successfully returned to app");
     console.log(data);
+    console.log("Successfully returned to app");
     // window.location.href = '/user'
   })
 };
