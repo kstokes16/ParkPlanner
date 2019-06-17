@@ -80,6 +80,13 @@ module.exports = function (app) {
     });
   });
 
+    // Render meet the tem page
+    app.get("/user/saved-plans", function(req, res) {
+      res.render("saved-plans", {
+        style: "saved-plans.css"
+      });
+    });
+
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");
