@@ -1,9 +1,6 @@
 var db = require("../models");
 var Sequelize = require("sequelize");
 const Op = Sequelize.Op;
-// var $ = require("jquery")
-// var pageData = require("../public/js/index")
-
 
 module.exports = function (app) {
   // Load index page

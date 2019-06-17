@@ -1,3 +1,5 @@
+  // let Sequelize = require("sequelize");
+  // const Op = Sequelize.Op;
 // submit button on homepage modal for new user
 $("#user-submit").on("click", function (event) {
   console.log("JS is working");
@@ -156,9 +158,20 @@ var getRides = function(currentPark) {
     where: {park: currentPark}
   }).done(function (data) {
     console.log(data);
+    getTimes(data[0])
     console.log("Successfully returned to app");
     // window.location.href = '/user'
   })
+};
+
+var getTimes = function(ride) {
+  return $.ajax({
+    url: "api/rides/:ridename",
+    type: "GET"
+  }).done(function(bestTimes){
+    console.log(bestTimes)
+    $(".bestTimes").append(bestTimes)
+  });
 };
 
 currentPark = [];
