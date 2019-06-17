@@ -19,6 +19,7 @@ module.exports = function (app) {
   // Load user page after login
   app.get("/user", function (req, res) {
     db.Rides.findAll({}).then(function () {
+      console.log(req.body)
     res.render("user", {
       style: "user-style.css",
       javascript: "user.js"
@@ -47,7 +48,7 @@ module.exports = function (app) {
         javascript: "user.js",
         ride: dbData
       });
-      console.log(req.body);
+      
       function rideMath(ride) {
         switch(ride) {
           case "Seven_dwarfs_trains":
