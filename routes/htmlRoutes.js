@@ -10,13 +10,25 @@ module.exports = function (app) {
         javascript: "index.js"
       });
     });
+    // Render meet the tem page
+ app.get("/about-us", function(req, res) {
+  res.render("meet-the-team", {
+    style: "meet-the-team.css"
+  });
+});
+
+  // Render meet the tem page
+  app.get("/user/saved-plans", function(req, res) {
+    res.render("saved-plans", {
+      style: "saved-plans.css"
+    });
+  });
 
     app.get("/example", function(req, res) {
       res.render("example", {
         style: "example-style.css"
       });
     });
-
 
   // Build active user plan
   app.get("/user", function(req, res){
@@ -46,4 +58,19 @@ module.exports = function (app) {
   app.get("*", function (req, res) {
     res.render("404");
   });
-  };
+  
+ // Render meet the tem page
+ app.get("/about-us", function(req, res) {
+  res.render("meet-the-team", {
+    style: "meet-the-team.css"
+  });
+});
+
+  // Render meet the tem page
+  app.get("/user/saved-plans", function(req, res) {
+    res.render("saved-plans", {
+      style: "saved-plans.css"
+    });
+  });
+
+};
