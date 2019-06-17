@@ -193,76 +193,38 @@
                 <p>{{this.rideDescription}}
                 </p>
                 <!-- Dropdown to select ride here -->
-                <p>Pick a ride time:  <select id="rideTimes">
-                <option value="8AM">8AM</option>
-                <option value="10AM">10AM</option>
-                <option value="12PM">12PM</option>
-                <option value="2PM">2PM</option>
-                <option value="4PM">4PM</option>
-                <option value="6PM">6PM</option>
+                {{!-- <p>Pick a ride time:  
+                  <select class="rideTimes" data-ridename="{{this.rideTitle}}">
+                <option value="8">8AM</option>
+                <option value="10">10AM</option>
+                <option value="12">12PM</option>
+                <option value="2">2PM</option>
+                <option value="4">4PM</option>
+                <option value="6">6PM</option>
                 <option value="8PM">8PM</option>
+                <button class="button-info add-btn">ADD to Plan</button>
                 </select>
-                </p>
+                </p> --}}
+                <!-- Example single danger button -->
+ <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-info rideTimes" value="8" data-ridename="{{this.rideTitle}}">8AM</button>
+    <button type="button" class="btn btn-info rideTimes" value="10" data-ridename="{{this.rideTitle}}">10AM</button>
+    <button type="button" class="btn btn-info rideTimes" value="12" data-ridename="{{this.rideTitle}}">12PM</button>
+    <button type="button" class="btn btn-info rideTimes" value="2" data-ridename="{{this.rideTitle}}">2PM</button>
+  </div>
+  <div class="btn-group mr-2" role="group" aria-label="Second group">
+    <button type="button" class="btn btn-info rideTimes" value="4" data-ridename="{{this.rideTitle}}">4PM</button>
+   <button type="button" class="btn btn-info rideTimes" value="6" data-ridename="{{this.rideTitle}}">6PM</button>
+    <button type="button" class="btn btn-info rideTimes" value="8PM" data-ridename="{{this.rideTitle}}">8PM</button>
+  </div>
+</div>
               <!-- End of dropdown -->
                 <p>When to ride: </p>
               </div>
             </div>
             <hr>
             {{/each}}
-            
-            <div class="row">
-              <div class="col-md-3">
-                <img src="https://via.placeholder.com/100">
-              </div>
-              <div class="col-md-9">
-                <h4>Ride Title</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eos veniam
-                  quam
-                  ex.
-                </p>
-              <!-- Dropdown to select ride here -->
-              <p>Pick a ride time:  <select id="rideTimes">
-              <option value="8AM">8AM</option>
-              <option value="10AM">10AM</option>
-              <option value="12PM">12PM</option>
-              <option value="2PM">2PM</option>
-              <option value="4PM">4PM</option>
-              <option value="6PM">6PM</option>
-              <option value="8PM">8PM</option>
-              </select>
-              </p>
-              <!-- End of dropdown -->
-
-                <p>When to ride: </p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-md-3">
-                <img src="https://via.placeholder.com/100">
-              </div>
-              <div class="col-md-9">
-                <h4>Ride Title</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eos veniam
-                  quam
-                  ex.
-                </p>
-              <!-- Dropdown to select ride here -->
-              <p>Pick a ride time:  <select id="rideTimes">
-              <option value="8AM">8AM</option>
-              <option value="10AM">10AM</option>
-              <option value="12PM">12PM</option>
-              <option value="2PM">2PM</option>
-              <option value="4PM">4PM</option>
-              <option value="6PM">6PM</option>
-              <option value="8PM">8PM</option>
-              </select>
-              </p>
-              <!-- End of dropdown -->
-
-                <p>When to ride: </p>
-              </div>
-            </div>
           </div>
           <div class="col-sm-6">
             <div class="card">
@@ -276,31 +238,31 @@
                 <tbody>
                   <tr>
                     <th scope="row">8am</th>
-                    <td id="8AM-Ride">Space Mountain</td>
+                    <td id="8AM-Ride"> </td>
                   </tr>
                   <tr>
                     <th scope="row">10am</th>
-                    <td id="10AM-Ride">Rock N Roller Coaster</td>
+                    <td id="10AM-Ride"> </td>
                   </tr>
                   <tr>
                     <th scope="row">12pm</th>
-                    <td id="12PM-Ride">Test Track</td>
+                    <td id="12PM-Ride"> </td>
                   </tr>
                   <tr>
                     <th scope="row">2pm</th>
-                    <td id="2PM-Ride">Splash Mountain</td>
+                    <td id="2PM-Ride"> </td>
                   </tr>
                   <tr>
                     <th scope="row">4pm</th>
-                    <td id="4PM-Ride">The Haunted Mansion</td>
+                    <td id="4PM-Ride"> </td>
                   </tr>
                   <tr>
                     <th scope="row">6pm</th>
-                    <td id="6PM-Ride">Pirates of the Caribbean</td>
+                    <td id="6PM-Ride"> </td>
                   </tr>
                   <tr>
                     <th scope="row">8pm</th>
-                    <td id="8PM-Ride">Soarin'</td>
+                    <td id="8PM-Ride"> </td>
                   </tr>
                 </tbody>
               </table>

@@ -176,3 +176,27 @@ $("#submit").on("click", function() {
   console.log("current Plan date: " + currentDate);
 });
 
+$(".rideTimes").click(function() {
+  var planData = {
+       time: $(this).val(),
+       ride: $(this).data("ridename")
+  }
+console.log(planData);
+     var ridetime = planData.time;
+     var ridename = planData.ride;
+    if(ridetime == "10") {
+      $("#10AM-Ride").append(ridename);
+    } else if (ridetime == "8") {
+      $("#8AM-Ride").append(ridename);
+    } else if (ridetime == "12") {
+      $("#12PM-Ride").append(ridename);
+    } else if (ridetime == "2") {
+        $("#2PM-Ride").append(ridename);
+      } else if (ridetime == "4") {
+          $("#4PM-Ride").append(ridename);
+      } else if (ridetime == "6") {
+          $("#6PM-Ride").append(ridename);
+      } else if (ridetime == "8PM") {
+          $("#8PM-Ride").append(ridename);
+      } 
+  });
