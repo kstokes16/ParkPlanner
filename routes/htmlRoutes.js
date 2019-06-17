@@ -1,6 +1,6 @@
-/* eslint-disable indent */
-/* eslint-disable prettier/prettier */
 var db = require("../models");
+var Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 
 module.exports = function (app) {
   // Load index page
@@ -17,54 +17,107 @@ module.exports = function (app) {
       });
     });
   // Load user page after login
-  // app.get("/user", function (req, res) {
-  //   // db.Plan.findAll({}).then(function () {
-  //   res.render("user", {
-  //     style: "user-style.css",
-  //     javascript: "user.js"
-  //   });
-  // });
+  app.get("/user", function (req, res) {
+    db.Rides.findAll({}).then(function () {
+      console.log(req.body)
+    res.render("user", {
+      style: "user-style.css",
+      javascript: "user.js"
+    });
+  })
+});
 
   // Load user page after login
   // Find all from Park model
-  app.get("/user", function(req, res) {
-    db.User.findAll({}).then(function() {
-      res.render("user", {
-        style: "user-style.css",
-      });
-    });
-  });
+  // app.get("/user", function(req, res) {
+  //   db.Users.findAll({}).then(function() {
+  //     res.render("user", {
+  //       style: "user-style.css"
+  //     });
+  //   });
+  // });
 
 
   // Build active user plan
-  app.get("/user/create-plan/", function(req, res) {
+  app.get("/user", function(req, res) {
     db.Rides.findAll({
-      where: {park: "Magic Kingdom"}
-      //"park" is field data submitted by user on button click - replace this
+      where: {park: pageData.currentPark}
     }).then(function(dbData) {
       res.render("create-plan", {
         style: "create-plan.css",
+        javascript: "user.js",
         ride: dbData
       });
-      if (dbData.length > 0){
-        for (i=0; i < dbData.length; i++) {
-          var thisRide = dbData[i].rideTitle;
-          db.pirates_of_caribbean.findAll({
-            where: {
-              waitMin: 20
-            }  
-          }).then(function(x) {
-            console.log(x);
-            // if (waitTimes[i].waitMin < 30) 
-            //   console.log(waitTimes.useTime)
-          })
+      
+      function rideMath(ride) {
+        switch(ride) {
+          case "Seven_dwarfs_trains":
+              db.Seven_dwarfs_trains.findAll({
+                where: {
+                  waitMin: {[Op.lte]: 30},
+                  useDate: pageData.currentDate 
+                }  
+              }).then(function(x) {
+                console.log(x);
+                //for loop on result object?
+                // if (waitTimes[i].waitMin < 30) 
+                //   console.log(waitTimes.useTime)
+              });
+            break;
+
+          case "Alien_saucers":
+            break;
+        
+          case "Dinosaurs":
+            break;
+          
+          case "Expedition_everests":
+            break;
+
+          case "Flight_of_passages":
+            break;
+
+          case "Kilimanjaro_safaris":
+            break;
+
+          case "Navi_rivers":
+            break;
+
+          case "Pirates_of_caribbeans":
+            break;
+
+          case "Rock_n_rollercoasters":
+            break;  
+            
+          case "Slinky_dogs":
+            break;  
+          
+          case "Soarins":
+            break;    
+            
+          case "Spaceship_earths":
+            break;
+        
+          case "Splash_mountains":
+            break;    
+                  
+          case "Toy_story_manias":
+            break;
         }
+      } 
+
+      if (dbData.length > 0) {
+        for (i=0; i < dbData.length; i++) {
+          var thisRide = dbData[i].rideName;
+         rideMath(thisRide);
+         console.log(x)
+         }   
     }})
     });
 
   // Load user created plans page
   app.get("/user/saved-plans/:user", function(req, res) {
-    db.Plan.findAll({
+    db.Plans.findAll({
       where: {user: req.params.user}
     }).then(function() {
       res.render("saved-plans", {
@@ -72,20 +125,6 @@ module.exports = function (app) {
       });
     });
   });
-
-  // Render meet the tem page
-  app.get("/about-us", function(req, res) {
-    res.render("meet-the-team", {
-      style: "meet-the-team.css"
-    });
-  });
-
-    // Render meet the tem page
-    app.get("/user/saved-plans", function(req, res) {
-      res.render("saved-plans", {
-        style: "saved-plans.css"
-      });
-    });
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
