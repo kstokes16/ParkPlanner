@@ -16,17 +16,18 @@ module.exports = function (app) {
     });
   // Load user page after login
   app.get("/user", function (req, res) {
-    // db.Plan.findAll({}).then(function () {
+    db.Plan.findAll({}).then(function () {
     res.render("user", {
       style: "user-style.css",
       javascript: "user.js"
     });
-  });
+  })
+});
 
   // Load user page after login
   // Find all from Park model
   app.get("/user", function(req, res) {
-    db.User.findAll({}).then(function() {
+    db.Users.findAll({}).then(function() {
       res.render("user", {
         style: "user-style.css"
       });
@@ -46,13 +47,13 @@ module.exports = function (app) {
       });
       if (dbData.length > 0){
         for (i=0; i < dbData.length; i++) {
-          var thisRide = dbData[i].rideTitle;
-          db.pirates_of_caribbean.findAll({
+          var thisRide = dbData[i].rideTitle + "s";
+          db.thisRide.findAll({
             where: {
               waitMin: 20
             }  
           }).then(function(x) {
-            console.log(x);
+            console.log(x[i].useTime);
             // if (waitTimes[i].waitMin < 30) 
             //   console.log(waitTimes.useTime)
           })
