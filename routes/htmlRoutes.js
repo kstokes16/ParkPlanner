@@ -11,7 +11,7 @@ module.exports = function (app) {
 
     app.get("/example", function(req, res) {
       res.render("example", {
-        style: "example.css"
+        style: "example-style.css"
       });
     });
   // Load user page after login
