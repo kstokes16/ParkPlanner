@@ -213,3 +213,15 @@ console.log(planData);
           $("#8PM-Ride").append(ridename);
       } 
   });
+
+  $("#saved-plans-btn").on("click", function(event){
+    $.ajax("/api/plan", {
+      method: "POST",
+      data: $("#8AM-Ride")
+    })
+      .done(function(data) {
+        console.log("You have successfully saved a plan!");
+        console.log(data);
+        window.location.href = '/user'
+      })
+  })
