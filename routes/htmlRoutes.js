@@ -13,7 +13,7 @@ module.exports = function (app) {
 
     app.get("/example", function(req, res) {
       res.render("example", {
-        style: "example.css"
+        style: "example-style.css"
       });
     });
   // Load user page after login
@@ -74,8 +74,10 @@ module.exports = function (app) {
   });
 
   // Render meet the tem page
-  app.get("/about-us", function (req, res) {
-    res.render("meet-the-team");
+  app.get("/about-us", function(req, res) {
+    res.render("meet-the-team", {
+      style: "meet-the-team.css"
+    });
   });
 
   // Render 404 page for any unmatched routes
