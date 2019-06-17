@@ -1,3 +1,5 @@
+  // let Sequelize = require("sequelize");
+  // const Op = Sequelize.Op;
 // submit button on homepage modal for new user
 $("#user-submit").on("click", function (event) {
   console.log("JS is working");
@@ -149,12 +151,35 @@ $("#user-submit").on("click", function (event) {
 // // // Add event listeners to the submit and delete buttons
 // // $submitBtn.on("click", handleFormSubmit);
 // // $exampleList.on("click", ".delete", handleDeleteBtnClick)
+var getRides = function(currentPark) {
+  return $.ajax({
+    url: "api/rides",
+    type: "GET",
+    where: {park: currentPark}
+  }).done(function (data) {
+    console.log(data);
+    getTimes(data[0])
+    console.log("Successfully returned to app");
+    // window.location.href = '/user'
+  })
+};
+
+var getTimes = function(ride) {
+  return $.ajax({
+    url: "api/rides/:ridename",
+    type: "GET"
+  }).done(function(bestTimes){
+    console.log(bestTimes)
+    $(".bestTimes").append(bestTimes)
+  });
+};
 
 currentPark = [];
 $(".park").on("click", function() {
   delete currentPark;
   currentPark = $(this).data("parkname");
   console.log(currentPark);
+  getRides(currentPark);
 });
 
 currentDate = [];
@@ -163,3 +188,28 @@ $("#submit").on("click", function() {
   currentDate = $("#plan-date").val()
   console.log("current Plan date: " + currentDate);
 });
+
+$(".rideTimes").click(function() {
+  var planData = {
+       time: $(this).val(),
+       ride: $(this).data("ridename")
+  }
+console.log(planData);
+     var ridetime = planData.time;
+     var ridename = planData.ride;
+    if(ridetime == "10") {
+      $("#10AM-Ride").append(ridename);
+    } else if (ridetime == "8") {
+      $("#8AM-Ride").append(ridename);
+    } else if (ridetime == "12") {
+      $("#12PM-Ride").append(ridename);
+    } else if (ridetime == "2") {
+        $("#2PM-Ride").append(ridename);
+      } else if (ridetime == "4") {
+          $("#4PM-Ride").append(ridename);
+      } else if (ridetime == "6") {
+          $("#6PM-Ride").append(ridename);
+      } else if (ridetime == "8PM") {
+          $("#8PM-Ride").append(ridename);
+      } 
+  });
