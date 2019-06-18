@@ -5,7 +5,7 @@ const Op = Sequelize.Op;
 module.exports = function (app) {
   // GET all users -- working
   app.get("/api/user", function (req, res) {
-    db.User.findAll({}).then(function (data) {
+    db.Users.findAll({}).then(function (data) {
       res.json(data);
     });
   });
@@ -14,7 +14,7 @@ module.exports = function (app) {
   // GET all parks -- works
 
   app.get("/api/park", function (req, res) {
-    db.Park.findAll({}).then(function (data) {
+    db.Parks.findAll({}).then(function (data) {
       res.json(data);
     });
   });
@@ -36,7 +36,7 @@ module.exports = function (app) {
 
   // POST a new user -- working 
   app.post("/api/user", function(req, res) {
-    db.User.create(req.body).then(function(data) {
+    db.Users.create(req.body).then(function(data) {
       res.json(data);
       console.log(data);
     });
