@@ -4,11 +4,11 @@ const Op = Sequelize.Op;
 
 module.exports = function (app) {
   // GET all users -- working
-  app.get("/api/user", function (req, res) {
-    db.Users.findAll({}).then(function (data) {
-      res.json(data);
-    });
-  });
+  // app.get("/api/user", function (req, res) {
+  //   db.Users.findAll({}).then(function (data) {
+  //     res.json(data);
+  //   });
+  // });
 
 
   // GET all parks -- works
